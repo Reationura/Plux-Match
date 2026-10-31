@@ -1,0 +1,75 @@
+# PluxMatch 消息配置
+# 作者: Reationura
+
+prefix: "&6[PluxMatch] "
+
+general:
+  no-permission: "&c你没有权限执行此命令"
+  player-not-found: "&c未找到玩家: {player}"
+  only-player: "&c只有玩家可以执行此命令"
+  unknown-command: "&c未知命令，请使用 /match help 查看帮助"
+  reload-success: "&a配置已成功重载"
+
+queue:
+  join-success: "&a已加入队列: {queue}"
+  already-in-queue: "&c你已经在队列中"
+  queue-not-found: "&c队列不存在: {queue}"
+  queue-disabled: "&c队列已禁用: {queue}"
+  queue-full: "&c队列已满"
+  leave-success: "&a已退出队列"
+  not-in-queue: "&c你不在队列中"
+  join-cooldown: "&c请等待几秒后再试"
+  position-update: "&7队列位置: {position}/{total}"
+  waiting-time: "&7已等待: {time}"
+  party-not-allowed: "&c该队列不支持组队加入"
+  party-size-mismatch: "&c队伍人数与队列要求不符"
+
+match:
+  success: "&a&l匹配成功！正在传送..."
+  success-countdown: "&a传送倒计时: {seconds}"
+  team-assign: "&7你被分配到队伍: {team}"
+  match-cancelled: "&c匹配已取消"
+  server-unavailable: "&c目标服务器不可用，正在重新匹配..."
+
+tier:
+  promote: "&6段位更新：你现在是 {new} &6段位（原 {old}）"
+
+party:
+  create-success: "&a队伍创建成功！"
+  already-in-party: "&c你已经在队伍中"
+  not-in-party: "&c你不在队伍中"
+  invite-sent: "&a邀请已发送给 {player}"
+  invite-received: "&a{player} 邀请你加入队伍！使用 /match party accept {player} 接受"
+  invite-accepted: "&a{player} 已接受邀请"
+  invite-denied: "&c{player} 拒绝了邀请"
+  invite-expired: "&c邀请已过期"
+  kick-success: "&a已踢出 {player}"
+  kick-failed: "&c无法踢出该玩家"
+  disband-success: "&a队伍已解散"
+  not-leader: "&c你不是队长"
+  member-left: "&7{player} 离开了队伍"
+  member-joined: "&a{player} 加入了队伍"
+  party-join-queue: "&a队伍已加入队列"
+  party-size-limit: "&c队伍人数超过限制"
+
+stats:
+  header: "&6=== 匹配统计 ==="
+  elo: "&7ELO: {elo}"
+  wins: "&a胜场: {wins}"
+  losses: "&c败场: {losses}"
+  winrate: "&7胜率: {winrate}%"
+  matches: "&7总场次: {matches}"
+
+admin:
+  queue-created: "&a队列创建成功: {queue}"
+  queue-deleted: "&a队列已删除: {queue}"
+  queue-enabled: "&a队列已启用: {queue}"
+  queue-disabled: "&c队列已禁用: {queue}"
+  player-added: "&a玩家已加入队列: {player}"
+  player-removed: "&a玩家已移出队列: {player}"
+  server-added: "&a服务器已添加到组: {server}"
+  server-removed: "&a服务器已移除: {server}"
+  force-start: "&a强制匹配已触发"
+  no-queues: "&c没有可用队列"
+  no-servers: "&c没有可用服务器"
+

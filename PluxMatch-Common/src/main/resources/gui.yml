@@ -1,0 +1,90 @@
+main-menu:
+  title: "&6匹配菜单"
+  size: 27
+  items:
+    queue-item:
+      material: COMPASS
+      name: "&6{queue_name}"
+      lore:
+        - "&7人数: {players}/{max_players}"
+        - "&7状态: {status}"
+        - "&7点击加入"
+      slot: {slot}
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: " "
+      slot: {slot}
+
+party-menu:
+  title: "&6队伍管理"
+  size: 27
+  items:
+    member-item:
+      material: PLAYER_HEAD
+      name: "&6{player_name}"
+      lore:
+        - "&7角色: {role}"
+        - "&7状态: {status}"
+      slot: {slot}
+    invite-button:
+      material: EMERALD
+      name: "&a邀请玩家"
+      lore:
+        - "&7点击邀请"
+      slot: 18
+    kick-button:
+      material: REDSTONE
+      name: "&c踢出成员"
+      lore:
+        - "&7点击踢出"
+      slot: 19
+    disband-button:
+      material: BARRIER
+      name: "&c解散队伍"
+      lore:
+        - "&7点击解散"
+      slot: 20
+    join-queue-button:
+      material: COMPASS
+      name: "&a加入队列"
+      lore:
+        - "&7点击加入匹配"
+      slot: 24
+    close-button:
+      material: ARROW
+      name: "&c关闭"
+      slot: 26
+
+match-status:
+  title: "&6匹配状态"
+  size: 9
+  items:
+    status-item:
+      material: CLOCK
+      name: "&6排队中"
+      lore:
+        - "&7队列: {queue}"
+        - "&7位置: {position}/{total}"
+        - "&7等待时间: {time}"
+      slot: 4
+    leave-button:
+      material: REDSTONE
+      name: "&c退出队列"
+      slot: 8
+
+history-menu:
+  title: "&6历史记录"
+  size: 27
+  items:
+    record-item:
+      material: PAPER
+      name: "&6{date}"
+      lore:
+        - "&7模式: {mode}"
+        - "&7结果: {result}"
+        - "&7ELO变化: {elo_change}"
+      slot: {slot}
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: " "
+      slot: {slot}

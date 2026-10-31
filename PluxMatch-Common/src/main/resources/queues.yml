@@ -1,0 +1,120 @@
+# PluxMatch 队列配置文件
+# 作者: Reationura
+
+queues:
+  # ==================== 起床战争 ====================
+  solo-bedwars:
+    name: "单人起床战争"
+    description: "单人模式起床战争匹配"
+    enabled: true
+    special: false
+    group: bedwars
+    min-players: 2
+    max-players: 16
+    team-size: 1
+    algorithm: POPULATION
+    population-mode: RANDOM
+    allow-party: false
+    server-group: bedwars
+
+  team-bedwars:
+    name: "组队起床战争"
+    description: "组队模式起床战争匹配"
+    enabled: true
+    special: false
+    group: bedwars
+    min-players: 4
+    max-players: 16
+    team-size: 4
+    algorithm: POPULATION
+    population-mode: LEAST
+    allow-party: true
+    server-group: bedwars
+
+  # ==================== 空岛战争 ====================
+  skywars:
+    name: "空岛战争"
+    description: "经典空岛战争"
+    enabled: true
+    special: false
+    group: skywars
+    min-players: 2
+    max-players: 12
+    team-size: 1
+    algorithm: FIFO
+    population-mode: MOST
+    allow-party: false
+    server-group: skywars
+
+  # ==================== 决斗 ====================
+  duels:
+    name: "决斗"
+    description: "一对一决斗"
+    enabled: true
+    special: false
+    group: duels
+    min-players: 2
+    max-players: 2
+    team-size: 1
+    algorithm: FIFO
+    population-mode: RANDOM
+    allow-party: false
+    server-group: duels
+
+  # ==================== VIP 队列 ====================
+  vip-bedwars:
+    name: "VIP起床战争"
+    description: "VIP专属起床战争匹配"
+    enabled: true
+    special: true
+    group: bedwars
+    min-players: 2
+    max-players: 8
+    team-size: 1
+    algorithm: POPULATION
+    population-mode: LEAST
+    allow-party: true
+    server-group: bedwars
+
+  # ==================== 锦标赛 ====================
+  tournament:
+    name: "锦标赛匹配"
+    description: "官方锦标赛专属匹配"
+    enabled: true
+    special: true
+    group: tournament
+    min-players: 8
+    max-players: 8
+    team-size: 1
+    algorithm: FIFO
+    population-mode: RANDOM
+    allow-party: false
+    server-group: tournament
+
+# 队列分组配置（用于 GUI）
+queue-groups:
+  bedwars:
+    name: "起床战争"
+    description: "所有起床战争模式"
+    queues:
+      - solo-bedwars
+      - team-bedwars
+      - vip-bedwars
+
+  skywars:
+    name: "空岛战争"
+    description: "所有空岛战争模式"
+    queues:
+      - skywars
+
+  duels:
+    name: "决斗"
+    description: "所有决斗模式"
+    queues:
+      - duels
+
+  tournament:
+    name: "锦标赛"
+    description: "官方锦标赛"
+    queues:
+      - tournament

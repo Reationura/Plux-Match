@@ -1,0 +1,21 @@
+name: PluxMatch-Bukkit
+main: com.pluxmatch.bukkit.PluxMatchBukkit
+version: ${project.version}
+description: Bukkit Helper Plugin for PluxMatch - forwards commands to the proxy (BungeeCord/Velocity)
+author: Reationura
+api-version: 1.13
+
+commands:
+  match:
+    description: Match commands (forwarded to BungeeCord)
+    usage: /match [args...]
+    aliases: [pp]
+  matchadmin:
+    description: Match admin commands (forwarded to BungeeCord)
+    usage: /matchadmin [args...]
+    permission: match.admin
+
+permissions:
+  match.admin:
+    description: Allows use of match admin commands
+    default: op

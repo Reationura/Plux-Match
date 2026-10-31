@@ -1,0 +1,7 @@
+name: PluxMatch
+main: com.pluxmatch.PluxMatch
+version: 1.5.2
+description: Advanced Matchmaking Plugin for BungeeCord
+author: Reationura
+depends: []
+soft-depends: [PlaceholderAPI]

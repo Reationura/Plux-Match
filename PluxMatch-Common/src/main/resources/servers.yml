@@ -1,0 +1,69 @@
+server-groups:
+  bedwars:
+    name: "起床战争服务器"
+    servers:
+      - bedwars-1
+      - bedwars-2
+      - bedwars-3
+
+  skywars:
+    name: "空岛战争服务器"
+    servers:
+      - skywars-1
+      - skywars-2
+
+  duels:
+    name: "决斗服务器"
+    servers:
+      - duels-1
+      - duels-2
+
+servers:
+  bedwars-1:
+    name: "bedwars-1"
+    group: bedwars
+    enabled: true
+    max-players: 16
+    min-players-to-start: 8
+
+  bedwars-2:
+    name: "bedwars-2"
+    group: bedwars
+    enabled: true
+    max-players: 16
+    min-players-to-start: 8
+
+  bedwars-3:
+    name: "bedwars-3"
+    group: bedwars
+    enabled: true
+    max-players: 16
+    min-players-to-start: 8
+
+  skywars-1:
+    name: "skywars-1"
+    group: skywars
+    enabled: true
+    max-players: 12
+    min-players-to-start: 4
+
+  skywars-2:
+    name: "skywars-2"
+    group: skywars
+    enabled: true
+    max-players: 12
+    min-players-to-start: 4
+
+  duels-1:
+    name: "duels-1"
+    group: duels
+    enabled: true
+    max-players: 2
+    min-players-to-start: 2
+
+  duels-2:
+    name: "duels-2"
+    group: duels
+    enabled: true
+    max-players: 2
+    min-players-to-start: 2

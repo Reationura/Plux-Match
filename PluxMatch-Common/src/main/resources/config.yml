@@ -1,0 +1,85 @@
+# PluxMatch 主配置
+# 作者: Reationura
+
+database:
+  type: sqlite
+  mysql:
+    host: localhost
+    port: 3306
+    database: pluxmatch
+    username: root
+    password: password
+    pool-size: 10
+  sqlite:
+    file: data.db
+  mongodb:
+    uri: mongodb://localhost:27017
+    database: pluxmatch
+
+redis:
+  enabled: false
+  host: localhost
+  port: 6379
+  password: ""
+  channel: pluxmatch
+
+matchmaking:
+  default-algorithm: FIFO
+  elo:
+    initial: 1000
+    k-factor: 32
+    min-k-factor: 16
+    max-k-factor: 48
+  timeout: 10
+  # expand_elo: 等待越久，ELO 分段带宽越宽，可接受的房间负载随之放宽
+  timeout-strategy: expand_elo
+  elo-band:
+    # 起始容差（ELO 点）
+    initial: 100
+    # 最大容差（ELO 点），达到该值后带宽不再扩展
+    max: 500
+    # 每秒扩展的容差（ELO 点）
+    per-second: 25
+  max-queue-size: 1000
+  join-cooldown: 5
+
+# 段位（赛季）：按 ELO 阈值映射段位名称与展示（含颜色代码）
+tiers:
+  bronze:
+    min-elo: 0
+    display: "&c青铜"
+  silver:
+    min-elo: 1200
+    display: "&f白银"
+  gold:
+    min-elo: 1500
+    display: "&6黄金"
+  platinum:
+    min-elo: 1800
+    display: "&b铂金"
+  diamond:
+    min-elo: 2100
+    display: "&d钻石"
+  master:
+    min-elo: 2400
+    display: "&5大师"
+
+leaderboard:
+  # /match leaderboard 默认取前 N 名
+  size: 10
+
+server:
+  ping-interval: 5
+  max-failures: 3
+  fallback-server: lobby
+
+messages:
+  prefix: "&6[PluxMatch] "
+  use-color-codes: true
+
+security:
+  rate-limit: 10
+  rate-limit-window: 60
+  validate-player-online: true
+
+debug: false
